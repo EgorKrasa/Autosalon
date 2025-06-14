@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Auto - Автосалон</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="images/Logo.png" alt="Premium Auto Logo">
+                <h1>Premium Auto</h1>
+            </div>
+            <nav class="nav nav-animated" id="headerNav">
+                <ul>
+                    <li><a href="#hero" class="menu-link">Главная</a></li>
+                    <li><a href="#models" class="menu-link">Модели</a></li>
+                    <li><a href="#about" class="menu-link">О нас</a></li>
+                    <li><a href="#services" class="menu-link">Услуги</a></li>
+                    <li><a href="#contact" class="menu-link">Контакты</a></li>
+                    <li><a href="#" id="menuLogout" style="display:none;">Выйти</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Добро пожаловать в Premium Auto</h2>
+            <p>Ваш путь к эксклюзивности начинается здесь</p>
+            <a href="#models" class="btn">Смотреть модели</a>
+        </div>
+    </section>
+
+    <section id="models" class="models-section">
+        <div class="container">
+            <h2>Наши автомобили</h2>
+            <div class="models-grid">
+                <!-- Toyota Camry Black -->
+                <div class="model-card">
+                    <img src="images/Toyota Camry black.jpg" alt="Toyota Camry">
+                    <div class="model-info">
+                        <h3>Toyota Camry</h3>
+                        <p>Год: 2023</p>
+                        <p>Цвет: Черный</p>
+                        <div class="price">2 600 000 ₽</div>
+                        <span class="status available">В наличии</span>
+                        <button onclick="showCarDetails(1)">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Toyota Camry White -->
+                <div class="model-card">
+                    <img src="images/Toyota Camry.jpg" alt="Toyota Camry">
+                    <div class="model-info">
+                        <h3>Toyota Camry</h3>
+                        <p>Год: 2023</p>
+                        <p>Цвет: Белый</p>
+                        <div class="price">2 600 000 ₽</div>
+                        <span class="status available">В наличии</span>
+                        <button onclick="showCarDetails(2)">Подробнее</button>
+                    </div>
+                </div>
+                
+                <!-- Dodge Charger Black -->
+                <div class="model-card">
+                    <img src="images/Dodge Charger black.jpg" alt="Dodge Charger">
+                    <div class="model-info">
+                        <h3>Dodge Charger</h3>
+                        <p>Год: 2023</p>
+                        <p>Цвет: Черный</p>
+                        <div class="price">3 600 000 ₽</div>
+                        <span class="status available">В наличии</span>
+                        <button onclick="showCarDetails(3)">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Dodge Charger Red -->
+                <div class="model-card">
+                    <img src="images/Dodge Charger red.jpg" alt="Dodge Charger">
+                    <div class="model-info">
+                        <h3>Dodge Charger</h3>
+                        <p>Год: 2023</p>
+                        <p>Цвет: Красный</p>
+                        <div class="price">3 600 000 ₽</div>
+                        <span class="status available">В наличии</span>
+                        <button onclick="showCarDetails(4)">Подробнее</button>
+                    </div>
+                </div>
+                
+                <!-- BMW X5 -->
+                <div class="model-card">
+                    <img src="images/BMW X5 silver.jpg" alt="BMW X5">
+                    <div class="model-info">
+                        <h3>BMW X5</h3>
+                        <p>Год: 2023</p>
+                        <p>Цвет: Серебристый</p>
+                        <div class="price">4 600 000 ₽</div>
+                        <span class="status available">В наличии</span>
+                        <button onclick="showCarDetails(5)">Подробнее</button>
+                    </div>
+                </div>
+                
+                <!-- Toyota RAV4 -->
+                <div class="model-card">
+                    <img src="images/Toyota RAV4 grey.jpg" alt="Toyota RAV4">
+                    <div class="model-info">
+                        <h3>Toyota RAV4</h3>
+                        <p>Год: 2023</p>
+                        <p>Цвет: Серый</p>
+                        <div class="price">2 900 000 ₽</div>
+                        <span class="status available">В наличии</span>
+                        <button onclick="showCarDetails(6)">Подробнее</button>
+                    </div>
+                </div>
+                
+                <!-- Dodge Challenger -->
+                <div class="model-card">
+                    <img src="images/Dodge Challenger 2023 orange.jpg" alt="Dodge Challenger">
+                    <div class="model-info">
+                        <h3>Dodge Challenger</h3>
+                        <p>Год: 2023</p>
+                        <p>Цвет: Оранжевый</p>
+                        <div class="price">4 100 000 ₽</div>
+                        <span class="status available">В наличии</span>
+                        <button onclick="showCarDetails(7)">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Premium Auto - ваш надежный партнер в выборе автомобиля премиум-класса.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card" data-service="oil_change">
+                    <i class="fas fa-oil-can"></i>
+                    <h3>Замена масла</h3>
+                    <p>Профессиональная замена масла и фильтров</p>
+                    <div class="price">от 5 000 ₽</div>
+                </div>
+                <div class="service-card" data-service="diagnostics">
+                    <i class="fas fa-car-battery"></i>
+                    <h3>Диагностика</h3>
+                    <p>Полная компьютерная диагностика автомобиля</p>
+                    <div class="price">от 3 000 ₽</div>
+                </div>
+                <div class="service-card" data-service="tire_service">
+                    <i class="fas fa-cog"></i>
+                    <h3>Шиномонтаж</h3>
+                    <p>Замена и балансировка колес</p>
+                    <div class="price">от 4 000 ₽</div>
+                </div>
+                <div class="service-card" data-service="body_repair">
+                    <i class="fas fa-car-crash"></i>
+                    <h3>Кузовной ремонт</h3>
+                    <p>Профессиональный ремонт и покраска</p>
+                    <div class="price">от 15 000 ₽</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2>Калькулятор стоимости</h2>
+            <div class="calculator-wrapper">
+                <div class="car-selection">
+                    <h3>Выберите автомобиль (необязательно)</h3>
+                    <select id="carSelect" class="calculator-select">
+                        <option value="">Выберите автомобиль</option>
+                    </select>
+                </div>
+                
+                <div class="services-selection">
+                    <h3>Выберите услуги</h3>
+                    <div class="services-grid">
+                        <div class="service-card" data-service="oil_change">
+                            <i class="fas fa-oil-can"></i>
+                            <h3>Замена масла</h3>
+                            <p>Профессиональная замена масла и фильтров</p>
+                            <div class="price">5 000 ₽</div>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="5000">
+                                Выбрать
+                            </label>
+                        </div>
+                        <div class="service-card" data-service="diagnostics">
+                            <i class="fas fa-car-battery"></i>
+                            <h3>Диагностика</h3>
+                            <p>Полная компьютерная диагностика</p>
+                            <div class="price">3 000 ₽</div>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="3000">
+                                Выбрать
+                            </label>
+                        </div>
+                        <div class="service-card" data-service="tire_service">
+                            <i class="fas fa-cog"></i>
+                            <h3>Шиномонтаж</h3>
+                            <p>Замена и балансировка колес</p>
+                            <div class="price">4 000 ₽</div>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="4000">
+                                Выбрать
+                            </label>
+                        </div>
+                        <div class="service-card" data-service="body_repair">
+                            <i class="fas fa-car-crash"></i>
+                            <h3>Кузовной ремонт</h3>
+                            <p>Профессиональный ремонт и покраска</p>
+                            <div class="price">от 15 000 ₽</div>
+                            <label class="service-checkbox">
+                                <input type="checkbox" name="service" value="15000">
+                                Выбрать
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="total-calculation">
+                    <h3>Итоговая стоимость</h3>
+                    <div class="total-wrapper">
+                        <div class="total-row">
+                            <span>Стоимость автомобиля:</span>
+                            <span id="carPrice">0 ₽</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Стоимость услуг:</span>
+                            <span id="servicesPrice">0 ₽</span>
+                        </div>
+                        <div class="total-row total">
+                            <span>Итого:</span>
+                            <span id="totalPrice">0 ₽</span>
+                        </div>
+                    </div>
+                    <button id="orderButton" class="btn">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Связаться с нами</h2>
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="contactName" name="name" placeholder="Ваше имя" required>
+                <div class="error-message"></div>
+                <input type="email" id="contactEmail" name="email" placeholder="Email" required>
+                <div class="error-message"></div>
+                <input type="tel" id="contactPhone" name="phone" placeholder="Телефон" required>
+                <div class="error-message"></div>
+                <input type="text" id="contactSubject" name="subject" placeholder="Тема сообщения" required>
+                <div class="error-message"></div>
+                <textarea id="contactMessage" name="message" placeholder="Сообщение" required></textarea>
+                <div class="error-message"></div>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+            <div id="contactSuccess" class="success-message" style="display: none;">
+                Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/Logo.png" alt="Premium Auto Logo">
+                    <p>Premium Auto</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#models">Модели</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center;">
+                <p>&copy; 2024 Premium Auto. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для входа в админ-панель -->
+    <div id="adminLoginModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="closeAdminLogin">&times;</span>
+            <h3>Вход в админ-панель</h3>
+            <form id="adminLoginForm">
+                <label>Имя пользователя: <input type="text" id="adminUsername" required></label><br>
+                <label>Пароль: <input type="password" id="adminPassword" required></label><br>
+                <button type="submit">Войти</button>
+            </form>
+            <div id="adminLoginError" style="color:red; display:none;">Неверный логин или пароль</div>
+        </div>
+    </div>
+
+    <!-- Контейнер админ-панели (скрыт по умолчанию) -->
+    <div id="adminPanelContainer" style="display:none;">
+        <header class="header">
+            <div class="container header-flex">
+                <div class="logo">
+                    <img src="images/Logo.png" alt="Premium Auto Logo">
+                    <h1>Админ-панель</h1>
+                </div>
+                <nav class="nav nav-animated">
+                    <ul>
+                        <li><a href="#" id="adminLogoutBtn">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="admin-main">
+            <section id="admin-messages" class="admin-section">
+                <h2>Сообщения от клиентов</h2>
+                <div class="messages-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Дата</th>
+                                <th>Имя</th>
+                                <th>Email</th>
+                                <th>Телефон</th>
+                                <th>Тема</th>
+                                <th>Сообщение</th>
+                                <th>Статус</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="messagesTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="admin-cars">
+                <h2>Автомобили</h2>
+                <button id="addCarBtn" class="btn btn-primary">Добавить автомобиль</button>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Фото</th>
+                            <th>Модель</th>
+                            <th>Год</th>
+                            <th>Цвет</th>
+                            <th>Цена</th>
+                            <th>Статус</th>
+                            <th>Количество</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carsTableBody"></tbody>
+                </table>
+            </section>
+            <section id="admin-services" class="admin-section">
+                <h2>Управление услугами</h2>
+                <button id="addServiceBtn" class="btn btn-primary">Добавить услугу</button>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Описание</th>
+                            <th>Цена</th>
+                            <th>Иконка</th>
+                            <th>Статус</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="servicesTableBody"></tbody>
+                </table>
+            </section>
+            <section id="admin-orders">
+                <h2>Заказы</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Клиент</th><th>Модель</th><th>Статус</th><th>Сумма</th><th>Действия</th></tr>
+                    </thead>
+                    <tbody id="ordersTableBody"></tbody>
+                </table>
+            </section>
+            <section id="admin-customers">
+                <h2>Клиенты</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Имя</th><th>Email</th><th>Телефон</th></tr>
+                    </thead>
+                    <tbody id="customersTableBody"></tbody>
+                </table>
+            </section>
+            <!-- Уведомление о новых сообщениях -->
+            <div id="adminMessageNotification" style="display:none; background:#ffeeba; color:#856404; padding:10px; margin:10px 0; border-radius:5px;"></div>
+        </main>
+        <!-- Модальное окно для добавления/редактирования авто -->
+        <div id="carModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" id="closeCarModal">&times;</span>
+                <h3 id="carModalTitle">Добавить автомобиль</h3>
+                <form id="carForm">
+                    <input type="hidden" id="carId">
+                    <div class="form-group">
+                        <label>Бренд:</label>
+                        <select id="carBrand" required>
+                            <option value="">Выберите бренд</option>
+                            <option value="1">Toyota</option>
+                            <option value="2">Dodge</option>
+                            <option value="3">BMW</option>
+                            <option value="4">Hyundai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Модель:</label>
+                        <select id="carModel" required>
+                            <option value="">Сначала выберите бренд</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>VIN:</label>
+                        <input type="text" id="carVin" required maxlength="17">
+                    </div>
+                    <div class="form-group">
+                        <label>Год:</label>
+                        <input type="number" id="carYear" required min="1900" max="2024">
+                    </div>
+                    <div class="form-group">
+                        <label>Цвет:</label>
+                        <input type="text" id="carColor" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Пробег (км):</label>
+                        <input type="number" id="carMileage" required min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Цена (₽):</label>
+                        <input type="number" id="carPrice" required min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Статус:</label>
+                        <select id="carStatus" required>
+                            <option value="available">В наличии</option>
+                            <option value="sold">Продан</option>
+                            <option value="reserved">Зарезервирован</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Фото:</label>
+                        <input type="file" id="carImage" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <!-- Модальное окно для добавления/редактирования услуги -->
+        <div id="serviceModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeServiceModal">&times;</span>
+                <h3 id="serviceModalTitle">Добавить услугу</h3>
+                <form id="serviceForm">
+                    <input type="hidden" id="serviceId">
+                    <div class="form-group">
+                        <label>Название:</label>
+                        <input type="text" id="serviceName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Описание:</label>
+                        <textarea id="serviceDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Цена:</label>
+                        <input type="number" id="servicePrice" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Класс иконки (Font Awesome):</label>
+                        <input type="text" id="serviceIcon" placeholder="fas fa-wrench">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно оформления заказа -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Оформление заказа</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="clientName">ФИО:</label>
+                    <input type="text" id="clientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPhone">Телефон:</label>
+                    <input type="tel" id="clientPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientEmail">Email:</label>
+                    <input type="email" id="clientEmail" required>
+                </div>
+                <div class="order-summary">
+                    <h3>Ваш заказ:</h3>
+                    <div id="orderSummary"></div>
+                </div>
+                <button type="submit" class="btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
